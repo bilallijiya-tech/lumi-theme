@@ -1,0 +1,88 @@
+/* ============================================================
+   LUMINOVE — PRODUCT PAGE + STICKY BAR FIX + LUXURY POLISH
+   ------------------------------------------------------------
+   Chargé via theme.liquid. Impact performance : négligeable
+   (~2 KB, non-bloquant, mis en cache au premier chargement).
+   ============================================================ */
+
+/* ---------- TITRE PRODUIT (H1) — CINZEL ---------- */
+.product-information h1,
+.product-information .product__title,
+.product-details h1 {
+  font-family: 'Cinzel', Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.1em !important;
+  line-height: 1.2 !important;
+  color: #0A0A0A !important;
+  text-transform: none !important;
+}
+
+/* ---------- PRIX — CORMORANT ---------- */
+.product-information .price,
+.product-information .money {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.06em !important;
+  font-size: 1.5rem !important;
+  color: #0A0A0A !important;
+}
+
+/* ---------- DESCRIPTION — CORMORANT ---------- */
+.product-information .rte,
+.product-information p {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 1.15rem !important;
+  line-height: 1.7 !important;
+  color: #1C1C1C !important;
+}
+
+/* ---------- SÉPARATEURS OR DISCRETS ---------- */
+.product-information hr {
+  border: none !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(201,168,76,0.35), transparent) !important;
+  margin-block: 1.5rem !important;
+}
+
+/* ============================================================
+   STICKY ADD-TO-CART BAR — CORRECTION DU CHEVAUCHEMENT
+   Le bar fixe ne masque plus le contenu de la page.
+   ============================================================ */
+
+/* 1. Espace en bas = hauteur du bar (74px) + marge de sécurité */
+main#MainContent {
+  padding-bottom: 120px !important;
+}
+
+/* 2. Bar : fond ivoire élégant, bordure or, ombre douce */
+.sticky-add-to-cart__bar {
+  background: rgba(245, 240, 232, 0.97) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  backdrop-filter: blur(8px) !important;
+  border-top: 1px solid rgba(201, 168, 76, 0.45) !important;
+  box-shadow: 0 -4px 24px rgba(10, 10, 10, 0.08) !important;
+  bottom: 0 !important;
+  border-radius: 0 !important;
+  padding: 10px 0 !important;
+}
+
+/* 3. Bouton du bar — identité or/noir nette */
+.sticky-add-to-cart__bar .button,
+.sticky-add-to-cart__bar button[type='submit'] {
+  background: #0A0A0A !important;
+  color: #F5F0E8 !important;
+  border: 1px solid #C9A84C !important;
+  border-radius: 0 !important;
+  letter-spacing: 0.14em !important;
+}
+
+/* ---------- MOBILE ---------- */
+@media screen and (max-width: 749px) {
+  main#MainContent { padding-bottom: 100px !important; }
+  .product-information h1,
+  .product-details h1 {
+    letter-spacing: 0.06em !important;
+    font-size: 1.7rem !important;
+  }
+  .product-information .price { font-size: 1.3rem !important; }
+}
