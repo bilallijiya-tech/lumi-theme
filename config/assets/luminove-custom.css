@@ -1,0 +1,202 @@
+/* ============================================================
+   LUMINOVE — LUXURY IDENTITY LAYER
+   Palette: Noir #0A0A0A | Or #C9A84C | Velours #1A0A2E | Ivoire #F5F0E8 | Carbone #1C1C1C
+   Fonts: Cormorant Garamond (display) | Cinzel (titres) | Lato (corps)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Cinzel:wght@400;500;600&family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --ln-noir: #0A0A0A;
+  --ln-or: #C9A84C;
+  --ln-velours: #1A0A2E;
+  --ln-ivoire: #F5F0E8;
+  --ln-carbone: #1C1C1C;
+  --ln-or-soft: rgba(201,168,76,0.25);
+  --ln-or-faint: rgba(201,168,76,0.10);
+  --ln-font-display: 'Cormorant Garamond', Georgia, serif;
+  --ln-font-title: 'Cinzel', Georgia, serif;
+  --ln-font-body: 'Lato', -apple-system, sans-serif;
+}
+
+/* ---------- TYPOGRAPHY ---------- */
+h1, h2, .h1, .h2 {
+  font-family: var(--ln-font-title) !important;
+  letter-spacing: 0.1em !important;
+  font-weight: 500 !important;
+  text-transform: none;
+  line-height: 1.25 !important;
+}
+
+h3, h4, h5, h6, .h3, .h4 {
+  font-family: var(--ln-font-display) !important;
+  letter-spacing: 0.05em !important;
+  font-weight: 500 !important;
+}
+
+body, p, .product__text, .rte, li, a, span, input, textarea, button, select {
+  font-family: var(--ln-font-body);
+  letter-spacing: 0.01em;
+}
+
+.product__title, .card__heading, .collection__title {
+  font-family: var(--ln-font-display) !important;
+  letter-spacing: 0.04em !important;
+  font-weight: 500 !important;
+}
+
+/* Prix — élégance serif */
+.price, .price-item, .product__price, .money {
+  font-family: var(--ln-font-display) !important;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  color: var(--ln-carbone);
+}
+
+/* ---------- BUTTONS — SHARP LUXURY ---------- */
+.button, button, .btn, [type='submit'], .shopify-payment-button__button {
+  border-radius: 0 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase;
+  font-family: var(--ln-font-body) !important;
+  font-weight: 400 !important;
+  font-size: 12px !important;
+  padding: 16px 34px !important;
+  transition: all 0.45s cubic-bezier(0.25,0.46,0.45,0.94) !important;
+  border-width: 1px !important;
+}
+
+.button--primary, .button:not([disabled]):hover {
+  position: relative;
+}
+
+.button:hover, button:hover, .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 18px rgba(201,168,76,0.20);
+}
+
+/* ---------- WHITESPACE — EDITORIAL BREATHING ---------- */
+.section, .shopify-section {
+  padding-block: clamp(2.5rem, 6vw, 5.5rem);
+}
+
+.page-width, .container {
+  max-width: 1280px;
+}
+
+.product, .product__info-wrapper {
+  letter-spacing: 0.01em;
+}
+
+/* ---------- LINKS — GOLD ACCENT ---------- */
+a:not(.button):hover {
+  color: var(--ln-or) !important;
+  transition: color 0.35s ease;
+}
+
+/* Underline doré animé */
+.link, .product__title a {
+  position: relative;
+  text-decoration: none;
+}
+
+/* ---------- CARDS — MINIMAL FRAME ---------- */
+.card, .card-wrapper, .product-card {
+  border-radius: 0 !important;
+  transition: all 0.5s ease;
+}
+
+.card:hover, .card-wrapper:hover {
+  transform: translateY(-3px);
+}
+
+.card__media img {
+  transition: transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+
+.card:hover .card__media img {
+  transform: scale(1.04);
+}
+
+/* ---------- HEADER — ROYAL PRESENCE ---------- */
+.header {
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid var(--ln-or-soft);
+}
+
+.header__heading, .header__heading-link {
+  font-family: var(--ln-font-title) !important;
+  letter-spacing: 0.18em !important;
+  font-weight: 500 !important;
+}
+
+.header__menu-item {
+  font-family: var(--ln-font-body) !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  font-size: 12px !important;
+  font-weight: 400;
+}
+
+/* ---------- BADGES — GOLD SEAL ---------- */
+.badge {
+  border-radius: 0 !important;
+  font-family: var(--ln-font-body) !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase;
+  font-size: 10px !important;
+  font-weight: 700;
+  padding: 5px 12px !important;
+}
+
+/* ---------- FORM INPUTS — SHARP ---------- */
+input, textarea, select, .field__input, .select__select {
+  border-radius: 0 !important;
+  letter-spacing: 0.03em;
+  border-color: var(--ln-or-soft) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--ln-or) !important;
+  box-shadow: 0 0 0 1px var(--ln-or-soft) !important;
+}
+
+/* ---------- GOLD DIVIDERS ---------- */
+hr, .divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--ln-or-soft), transparent);
+}
+
+/* ---------- SCROLLBAR — DETAIL LUXE ---------- */
+::-webkit-scrollbar { width: 9px; }
+::-webkit-scrollbar-track { background: var(--ln-ivoire); }
+::-webkit-scrollbar-thumb { background: var(--ln-or); border-radius: 0; }
+::-webkit-scrollbar-thumb:hover { background: var(--ln-velours); }
+
+/* ---------- SELECTION — GOLD ---------- */
+::selection { background: var(--ln-or); color: var(--ln-noir); }
+
+/* ---------- FOOTER — NOBLE CLOSE ---------- */
+.footer {
+  letter-spacing: 0.06em;
+}
+
+.footer__content-top {
+  border-top: 1px solid var(--ln-or-soft);
+}
+
+/* ---------- ANNOUNCEMENT BAR ---------- */
+.announcement-bar, .utility-bar {
+  font-family: var(--ln-font-body) !important;
+  letter-spacing: 0.22em !important;
+  text-transform: uppercase;
+  font-size: 11px !important;
+  font-weight: 400;
+}
+
+/* ---------- RESPONSIVE REFINEMENT ---------- */
+@media screen and (max-width: 749px) {
+  h1, .h1 { letter-spacing: 0.06em !important; }
+  .button, button { padding: 14px 26px !important; letter-spacing: 0.1em !important; }
+}
