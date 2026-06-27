@@ -34,6 +34,7 @@
 
     {{ 'luminove-custom.css' | asset_url | stylesheet_tag }}
     {{ 'luminove-product.css' | asset_url | stylesheet_tag }}
+{{ 'luminove-trust.js' | asset_url | script_tag }}
 
     {% if request.design_mode %}
       {%- render 'theme-editor' -%}
