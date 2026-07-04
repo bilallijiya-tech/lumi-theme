@@ -36,6 +36,7 @@ jobs:
           echo "CLEAN_STORE=$CLEAN_STORE" >> "$GITHUB_ENV"
           echo "CLEAN_TOKEN=$CLEAN_TOKEN" >> "$GITHUB_ENV"
           echo "DEBUG store length=${#CLEAN_STORE} first=${CLEAN_STORE:0:3} last=${CLEAN_STORE: -3}"
+          echo "DEBUG token length=${#CLEAN_TOKEN} prefix=${CLEAN_TOKEN:0:7}"
       - name: Push theme
         env:
           SHOPIFY_CLI_THEME_TOKEN: ${{ env.CLEAN_TOKEN }}
