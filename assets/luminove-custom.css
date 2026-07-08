@@ -87,6 +87,16 @@ body, p, .product__text, .rte, li, a, span, input, textarea, button, select {
   color: var(--ln-noir) !important;
 }
 
+/* Quick-add button (product card) — noir text for contrast on gold background */
+.quick-add__button,
+.quick-add__button * {
+  color: var(--ln-noir) !important;
+}
+.quick-add__button:hover,
+.quick-add__button:hover * {
+  color: var(--ln-noir) !important;
+}
+
 /* ---------- WHITESPACE — EDITORIAL BREATHING ---------- */
 main .shopify-section + .shopify-section {
   margin-block-start: clamp(2.5rem, 6vw, 5rem);
