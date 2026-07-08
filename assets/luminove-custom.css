@@ -75,9 +75,21 @@ body, p, .product__text, .rte, li, a, span, input, textarea, button, select {
   box-shadow: 0 4px 18px rgba(201,168,76,0.20);
 }
 
+.button-primary, .button--primary {
+  --color-primary-button-background: var(--ln-or);
+  --color-primary-button-text: var(--ln-noir);
+  background: var(--ln-or) !important;
+  color: var(--ln-noir) !important;
+  border-color: var(--ln-or) !important;
+}
+.button-primary:hover, .button--primary:hover {
+  background: var(--ln-ivoire) !important;
+  color: var(--ln-noir) !important;
+}
+
 /* ---------- WHITESPACE — EDITORIAL BREATHING ---------- */
-.section, .shopify-section {
-  padding-block: clamp(2.5rem, 6vw, 5.5rem);
+main .shopify-section + .shopify-section {
+  margin-block-start: clamp(2.5rem, 6vw, 5rem);
 }
 
 .page-width, .container {
