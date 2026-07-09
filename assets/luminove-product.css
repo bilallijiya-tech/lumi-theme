@@ -54,10 +54,10 @@
   border-radius: 2px !important;
 }
 
-/* BOUTONS : or / noir premium */
+/* BOUTONS : or / noir premium — page produit uniquement (pas le quick-add des cartes) */
 .product-information .button,
-add-to-cart-component button,
-button[name="add"] {
+add-to-cart-component button:not(.quick-add__button),
+button[name="add"]:not(.quick-add__button) {
   background: #0A0A0A !important;
   color: #F5F0E8 !important;
   border: 1px solid #C9A84C !important;
@@ -68,8 +68,8 @@ button[name="add"] {
   transition: all 0.3s ease !important;
 }
 .product-information .button:hover,
-add-to-cart-component button:hover,
-button[name="add"]:hover {
+add-to-cart-component button:not(.quick-add__button):hover,
+button[name="add"]:not(.quick-add__button):hover {
   background: #C9A84C !important;
   color: #0A0A0A !important;
 }

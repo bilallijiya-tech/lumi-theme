@@ -87,13 +87,14 @@ body, p, .product__text, .rte, li, a, span, input, textarea, button, select {
   color: var(--ln-noir) !important;
 }
 
-/* Quick-add button (product card) — noir text for contrast on gold background */
-.quick-add__button,
-.quick-add__button * {
-  color: var(--ln-noir) !important;
+/* Quick-add button (product card) — noir base / gold hover, inner content inherits via currentColor */
+.quick-add__button {
+  background: var(--ln-noir) !important;
+  color: var(--ln-ivoire) !important;
+  border: 1px solid var(--ln-or) !important;
 }
-.quick-add__button:hover,
-.quick-add__button:hover * {
+.quick-add__button:hover {
+  background: var(--ln-or) !important;
   color: var(--ln-noir) !important;
 }
 
