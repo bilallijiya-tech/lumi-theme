@@ -33,7 +33,9 @@
     {%- render 'color-schemes' -%}
 
     {{ 'luminove-custom.css' | asset_url | stylesheet_tag }}
-    {{ 'luminove-product.css' | asset_url | stylesheet_tag }}
+    {% if template contains 'product' %}
+      {{ 'luminove-product.css' | asset_url | stylesheet_tag }}
+    {% endif %}
 {{ 'luminove-trust.js' | asset_url | script_tag }}
 
     {% if request.design_mode %}
