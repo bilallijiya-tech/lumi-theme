@@ -53,7 +53,7 @@ body, p, .product__text, .rte, li, a, span, input, textarea, button, select {
   color: var(--ln-carbone);
 }
 
-/* ---------- BUTTONS — SHARP LUXURY ---------- */
+/* ---------- BUTTONS — SHARP LUXURY (CTA buttons only — utility controls exempted below) ---------- */
 .button, button, .btn, [type='submit'], .shopify-payment-button__button {
   border-radius: 0 !important;
   letter-spacing: 0.14em !important;
@@ -222,4 +222,234 @@ hr, .divider {
 @media screen and (max-width: 749px) {
   h1, .h1 { letter-spacing: 0.06em !important; }
   .button, button { padding: 14px 26px !important; letter-spacing: 0.1em !important; }
+}
+
+/* ============================================================
+   SESSION 2026-07-10 — BILAL REVIEW REFINEMENTS v4
+   ============================================================ */
+
+/* ---------- (1) LOGO — TRIPLE PRESENCE (var override, bar stays sleek) ---------- */
+.header-logo__image,
+.header-logo .header-logo__image-container,
+.header-logo img {
+  --header-logo-image-height: 76px !important;
+  --header-logo-image-height-mobile: 50px !important;
+  --header-logo-image-width: auto !important;
+  --header-logo-image-width-mobile: auto !important;
+}
+.header-logo__image {
+  height: var(--header-logo-image-height-mobile) !important;
+  width: auto !important;
+  max-width: none !important;
+}
+@media screen and (min-width: 750px) {
+  .header-logo__image {
+    height: var(--header-logo-image-height) !important;
+  }
+}
+/* Keep the bar compact despite the bigger logo */
+.header .header__columns {
+  --padding-block-start: 4px;
+  --padding-block-end: 4px;
+}
+
+/* ---------- (2) HEADER — GLASS DEPTH & LIVING GOLD ---------- */
+#header-component .header__underlay-closed {
+  background: rgba(245, 240, 232, 0.80) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(1.25);
+  backdrop-filter: blur(16px) saturate(1.25);
+}
+.header {
+  border-bottom: none;
+  position: relative;
+}
+.header::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 2px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent 0%, rgba(201,168,76,0.15) 20%, #C9A84C 50%, rgba(201,168,76,0.15) 80%, transparent 100%);
+  background-size: 200% 100%;
+  animation: ln-gold-sweep 7s ease-in-out infinite;
+  z-index: 2;
+}
+@keyframes ln-gold-sweep {
+  0%, 100% { background-position: 0% 0; opacity: 0.75; }
+  50% { background-position: 100% 0; opacity: 1; }
+}
+/* Icons — lift, glow, gold on hover */
+.header-actions__action,
+.header .search-action button,
+.dropdown-localization__button {
+  transition: transform 0.35s cubic-bezier(0.25,0.46,0.45,0.94), color 0.35s ease, filter 0.35s ease !important;
+}
+.header-actions__action:hover,
+.header .search-action button:hover,
+.dropdown-localization__button:hover {
+  transform: translateY(-2px) scale(1.12);
+  color: var(--ln-or) !important;
+  filter: drop-shadow(0 3px 8px rgba(201,168,76,0.45));
+}
+/* Menu links — gold underline that grows from center */
+.header .menu-list__link {
+  position: relative;
+}
+.header .menu-list__link::after {
+  content: '';
+  position: absolute;
+  left: 50%; bottom: -2px;
+  width: 0; height: 1px;
+  background: var(--ln-or);
+  transition: width 0.4s cubic-bezier(0.25,0.46,0.45,0.94), left 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.header .menu-list__link:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* Cart bubble — gold seal */
+.header [class*='cart-bubble'], .header .cart-count-bubble {
+  background: var(--ln-or) !important;
+  color: var(--ln-noir) !important;
+  font-weight: 700;
+}
+
+/* ---------- (3) PRODUCT CARDS — TEXT CLARITY ---------- */
+main .product-grid .product-title,
+main [class*='product-card'] a,
+main .card__heading,
+#shopify-section-product_list_fa6P9H a {
+  font-family: var(--ln-font-display) !important;
+  font-size: 1.28rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+  letter-spacing: 0.025em !important;
+  color: #141414 !important;
+}
+main .product-grid .price,
+#shopify-section-product_list_fa6P9H .price,
+main [class*='product-card'] .money {
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  color: #0A0A0A !important;
+  opacity: 1 !important;
+}
+
+/* ---------- (4) STORY — LIVING GOLD TITLE + EDITORIAL BODY ---------- */
+#shopify-section-story_lmnv h2 {
+  font-size: clamp(2.2rem, 5vw, 3.4rem) !important;
+  background: linear-gradient(100deg, #8A6F2F 0%, #C9A84C 25%, #F2DE9B 50%, #C9A84C 75%, #8A6F2F 100%);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent !important;
+  animation: ln-gold-flow 6s linear infinite;
+  text-shadow: 0 1px 24px rgba(201,168,76,0.18);
+}
+@keyframes ln-gold-flow {
+  to { background-position: 220% center; }
+}
+#shopify-section-story_lmnv p {
+  font-family: var(--ln-font-display) !important;
+  font-size: 1.38rem !important;
+  line-height: 1.95 !important;
+  font-style: italic;
+  color: #1C1C1C !important;
+  max-width: 62ch;
+  margin-inline: auto;
+}
+#shopify-section-story_lmnv .s_vals p,
+#shopify-section-story_lmnv p:last-of-type {
+  font-style: normal;
+  font-size: 1.05rem !important;
+  letter-spacing: 0.08em;
+  color: #A98B3D !important;
+}
+
+/* ---------- (5) FUNCTIONAL CONTROLS — EXEMPT FROM LUXURY BUTTON SKIN ----------
+   Quantity +/-, remove/trash, drawer close, accordion toggles: utility controls.
+   The global button rule was inflating them into invisible boxes. */
+button.button-unstyled,
+.button-unstyled,
+.quantity-selector button,
+.quantity-minus,
+.quantity-plus,
+cart-items-component .button-unstyled,
+.cart-item button,
+button[name='minus'],
+button[name='plus'],
+.cart-items__remove,
+button.cart-items__remove {
+  padding: 6px 10px !important;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  transform: none !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+  font-size: inherit !important;
+  color: var(--ln-noir) !important;
+  min-width: 34px;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+button.button-unstyled:hover,
+.quantity-selector button:hover,
+button[name='minus']:hover,
+button[name='plus']:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  color: var(--ln-or) !important;
+  background: var(--ln-or-faint) !important;
+}
+.quantity-selector .svg-wrapper,
+.quantity-selector svg,
+button.button-unstyled svg {
+  width: 15px !important;
+  height: 15px !important;
+  opacity: 1 !important;
+  display: block;
+}
+.quantity-selector svg path,
+button.button-unstyled svg path {
+  stroke: currentColor;
+  fill: currentColor;
+}
+/* Quantity number input — clear and centered */
+.quantity-selector input[type='number'] {
+  min-width: 40px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--ln-noir) !important;
+  background: transparent;
+}
+/* Remove (trash) button — crisp icon, noir base, red hover */
+.cart-items__remove svg,
+button.cart-items__remove svg {
+  width: 18px !important;
+  height: 18px !important;
+  opacity: 1 !important;
+  display: block;
+}
+.cart-items__remove svg path,
+button.cart-items__remove svg path {
+  stroke: currentColor;
+}
+.cart-items__remove:hover,
+button.cart-items__remove:hover {
+  transform: none !important;
+  box-shadow: none !important;
+  color: #B3261E !important;
+  background: rgba(179,38,30,0.08) !important;
+}
+
+/* ---------- ACCESSIBILITY — CALM MODE ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .header::after,
+  #shopify-section-story_lmnv h2 {
+    animation: none !important;
+  }
 }

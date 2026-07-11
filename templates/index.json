@@ -9,6 +9,10 @@
  */
 {
   "sections": {
+    "lumi_hero_3d": {
+      "type": "luminove-hero-3d",
+      "settings": {}
+    },
     "hero_jVaWmY": {
       "type": "hero",
       "blocks": {
@@ -16,13 +20,13 @@
           "type": "text",
           "name": "t:names.heading",
           "settings": {
-            "text": "<p>Crea tu ambiente perfecto</p>",
-            "width": "fit-content",
+            "text": "<p>Tu Paraíso de Luz</p>",
+            "width": "100%",
             "max_width": "normal",
-            "alignment": "left",
+            "alignment": "center",
             "type_preset": "h1",
             "font": "var(--font-heading--family)",
-            "font_size": "3rem",
+            "font_size": "4rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -42,13 +46,13 @@
           "type": "text",
           "name": "t:names.text",
           "settings": {
-            "text": "<p>Iluminación decorativa que transforma tu hogar y jardín</p>",
-            "width": "fit-content",
-            "max_width": "normal",
-            "alignment": "left",
+            "text": "<p>Iluminación decorativa de lujo, creada para transformar tu hogar en un refugio de calma y elegancia.</p>",
+            "width": "100%",
+            "max_width": "narrow",
+            "alignment": "center",
             "type_preset": "h5",
             "font": "var(--font-body--family)",
-            "font_size": "1.1rem",
+            "font_size": "1.25rem",
             "line_height": "normal",
             "letter_spacing": "normal",
             "case": "none",
@@ -68,8 +72,8 @@
           "type": "button",
           "name": "t:names.button",
           "settings": {
-            "label": "Descubrir",
-            "link": "shopify://collections/all",
+            "label": "Descubrir la colección",
+            "link": "shopify://collections/iluminacion-decorativa",
             "open_in_new_tab": false,
             "style_class": "button-primary",
             "width": "fit-content",
@@ -85,10 +89,10 @@
         "subtext_ZZ1",
         "button_H9gpTf"
       ],
+      "disabled": true,
       "name": "t:names.hero",
       "settings": {
         "media_type_1": "image",
-        "image_1": "shopify://shop_images/850984079769.jpg",
         "media_type_2": "image",
         "stack_media_on_mobile": false,
         "custom_mobile_media": false,
@@ -158,7 +162,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Nuestra Colección</h3>",
+                "text": "<h3>Iluminación Decorativa</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -184,7 +188,7 @@
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
               "settings": {
-                "label": "Ver todo",
+                "label": "Ver toda la colección",
                 "open_in_new_tab": false,
                 "style_class": "link",
                 "width": "fit-content",
@@ -292,14 +296,14 @@
       },
       "name": "Featured collection",
       "settings": {
-        "collection": "all",
+        "collection": "iluminacion-decorativa",
         "layout_type": "grid",
         "carousel_on_mobile": false,
-        "max_products": 8,
-        "columns": 4,
-        "mobile_columns": "2",
+        "max_products": 3,
+        "columns": 3,
+        "mobile_columns": "1",
         "mobile_card_size": "60cqw",
-        "columns_gap": 8,
+        "columns_gap": 16,
         "rows_gap": 24,
         "icons_style": "arrow",
         "icons_shape": "none",
@@ -307,13 +311,127 @@
         "horizontal_alignment": "flex-start",
         "gap": 28,
         "color_scheme": "scheme-1",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "padding-block-start": 56,
+        "padding-block-end": 56
+      }
+    },
+    "story_lmnv": {
+      "type": "section",
+      "blocks": {
+        "s_head": {
+          "type": "text",
+          "settings": {
+            "text": "<h2>AMBIENTE · ILUMINACIÓN</h2>",
+            "width": "100%",
+            "max_width": "normal",
+            "alignment": "center",
+            "type_preset": "h2",
+            "font": "var(--font-heading--family)",
+            "letter_spacing": "loose",
+            "color": "#C9A84C"
+          },
+          "blocks": {}
+        },
+        "s_body": {
+          "type": "text",
+          "settings": {
+            "text": "<p>En LumiNove creemos que la luz no solo ilumina: crea atmósferas, despierta emociones y convierte cada rincón en un refugio. Por eso, cada pieza de nuestra colección pasa una única prueba antes de llegar a ti: ¿crea ambiente? Si la respuesta no es un sí rotundo, no entra.</p>",
+            "width": "fit-content",
+            "max_width": "narrow",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)"
+          },
+          "blocks": {}
+        },
+        "s_vals": {
+          "type": "text",
+          "settings": {
+            "text": "<p>✦ Envío a toda Europa&nbsp;&nbsp;&nbsp;✦ Pago 100% seguro&nbsp;&nbsp;&nbsp;✦ Garantía de ambiente</p>",
+            "width": "100%",
+            "alignment": "center",
+            "type_preset": "h6",
+            "font": "var(--font-body--family)",
+            "color": "#C9A84C"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "s_head",
+        "s_body",
+        "s_vals"
+      ],
+      "name": "Historia LumiNove",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "gap": 20,
+        "section_width": "page-width",
+        "color_scheme": "scheme-1",
+        "padding-block-start": 72,
+        "padding-block-end": 72
+      }
+    },
+    "newsletter_lmnv": {
+      "type": "section",
+      "blocks": {
+        "n_head": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Únete al club LumiNove</h3>",
+            "width": "100%",
+            "alignment": "center",
+            "type_preset": "h3",
+            "font": "var(--font-heading--family)",
+            "color": "var(--color-foreground)"
+          },
+          "blocks": {}
+        },
+        "n_sub": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ideas de ambiente y ofertas privadas. Una vez al mes, sin ruido.</p>",
+            "width": "100%",
+            "alignment": "center",
+            "type_preset": "rte",
+            "font": "var(--font-body--family)",
+            "color": "var(--color-foreground)"
+          },
+          "blocks": {}
+        },
+        "n_form": {
+          "type": "email-signup",
+          "settings": {},
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "n_head",
+        "n_sub",
+        "n_form"
+      ],
+      "name": "Club LumiNove",
+      "settings": {
+        "content_direction": "column",
+        "vertical_on_mobile": true,
+        "horizontal_alignment_flex_direction_column": "center",
+        "vertical_alignment_flex_direction_column": "center",
+        "gap": 16,
+        "section_width": "page-width",
+        "color_scheme": "scheme-2",
+        "padding-block-start": 64,
+        "padding-block-end": 72
       }
     }
   },
   "order": [
+    "lumi_hero_3d",
     "hero_jVaWmY",
-    "product_list_fa6P9H"
+    "product_list_fa6P9H",
+    "story_lmnv",
+    "newsletter_lmnv"
   ]
 }
