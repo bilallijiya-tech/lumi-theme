@@ -41,4 +41,13 @@ jobs:
         env:
           SHOPIFY_CLI_THEME_TOKEN: ${{ env.CLEAN_TOKEN }}
           SHOPIFY_FLAG_STORE: ${{ env.CLEAN_STORE }}
-        run: shopify theme push --theme "${{ vars.THEME_ID }}" --store "${{ env.CLEAN_STORE }}" --allow-live --json
+        run: |
+          set +e
+          OUTPUT=$(shopify theme push --theme "${{ vars.THEME_ID }}" --store "${{ env.CLEAN_STORE }}" --allow-live --json 2>&1)
+          CODE=$?
+          echo "$OUTPUT"
+          if [ "$CODE" -ne 0 ]; then
+            # Surface the real CLI error as annotations (readable via the Checks API)
+            echo "$OUTPUT" | tail -n 20 | while IFS= read -r line; do echo "::error::PUSH: $line"; done
+          fi
+          exit "$CODE"
